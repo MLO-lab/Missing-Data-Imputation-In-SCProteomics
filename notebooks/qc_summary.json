@@ -1,0 +1,43 @@
+{
+  "dlbcl_mudata": {
+    "1_rna": {
+      "shape": [
+        332,
+        20314
+      ],
+      "pct_missing_overall": 4.22,
+      "pct_missing_per_feature_median": 4.22,
+      "pct_missing_per_feature_max": 4.22,
+      "pct_missing_per_sample_median": 0.0,
+      "pct_missing_per_sample_max": 100.0,
+      "n_features_all_missing": 0,
+      "n_samples_all_missing": 14
+    },
+    "2_prot": {
+      "shape": [
+        332,
+        6980
+      ],
+      "pct_missing_overall": 34.01,
+      "pct_missing_per_feature_median": 21.69,
+      "pct_missing_per_feature_max": 100.0,
+      "pct_missing_per_sample_median": 32.93,
+      "pct_missing_per_sample_max": 46.81,
+      "n_features_all_missing": 70,
+      "n_samples_all_missing": 0
+    }
+  },
+  "crc_proteomics_csv": {
+    "shape": [
+      997,
+      8403
+    ],
+    "pct_missing_overall": 0.29,
+    "pct_missing_per_feature_median": 0.0,
+    "pct_missing_per_feature_max": 49.95,
+    "pct_missing_per_sample_median": 0.2,
+    "pct_missing_per_sample_max": 1.61,
+    "n_features_all_missing": 0,
+    "n_samples_all_missing": 0
+  }
+}
