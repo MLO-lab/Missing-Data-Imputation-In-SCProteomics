@@ -56,7 +56,7 @@ DreamAI and ADMIN post lower average error, but only because they never attempte
 
 Across both protein datasets, splitting the score by why a value was hidden tells a clear story: every member of the MOFA family (MOFA+, MOFA-Flex, MOFA-Flex-GraphGP) does noticeably worse on values that were hidden because they were low-abundance than on values hidden completely at random. On the CRC data the error roughly doubles between the two.
 
-![Every MOFA-family method loses accuracy on detection-limit-type gaps](results/evaluation_figures/figs/fig3_mechanism_split.png)
+![Every MOFA-family method loses accuracy on detection-limit-type gaps](results/evaluation_figures/fig3_mechanism_split.png)
 
 This is exactly what the underlying math predicts. MOFA+ and its relatives handle a missing value by simply leaving it out of the model fit. That trick only stays fair when whether a value is missing has nothing to do with what that value would have been (this is the standard "missing at random" assumption in the statistics literature, going back to Little and Rubin). Mass spectrometry proteomics breaks that assumption directly: a protein is disproportionately likely to be missing precisely because it's low-abundance. Hernández-Lobato and colleagues showed in 2014 that this kind of value-dependent missingness biases plain matrix-factorization models exactly like MOFA+, and neither the original MOFA paper, the MOFA+ paper, nor the MOFA-Flex preprint claim otherwise or test for it directly.
 
@@ -68,7 +68,7 @@ MOFA-Flex is a newer, more flexible reimplementation of the same underlying mode
 
 Comparing all three directly, with matched priors, on the same data:
 
-![The MOFA+/MOFA-Flex gap holds at every level of MNAR-type missingness](results/evaluation_figures/figs/fig2_mofa_family_trend.png)
+![The MOFA+/MOFA-Flex gap holds at every level of MNAR-type missingness](results/evaluation_figures/fig2_mofa_family_trend.png)
 
 MOFA+ comes out ahead of both MOFA-Flex variants on every one of the three datasets, and the difference is statistically consistent (p < 0.0001 in each case), even though the gap in absolute RMSE is fairly small. Adding the protein network (MOFA-Flex-GraphGP) narrows the gap to MOFA+ slightly compared to plain MOFA-Flex, but doesn't close it.
 
@@ -78,7 +78,7 @@ The most likely explanation isn't that the newer model is worse in principle. It
 
 Two follow-up questions came up naturally once the MNAR weakness above was clear. Would MOFA+ do better if the low-abundance-type gaps were pre-filled with a detection-limit-aware method before MOFA+ ever saw them? And would MOFA+ do better if it were trained on the RNA and protein data together instead of one layer at a time, since that's the whole point of a multi-omics factor model?
 
-![Neither pre-filling gaps first nor training jointly beat MOFA+ left on its own](results/evaluation_figures/figs/fig4_pilot_ablation.png)
+![Neither pre-filling gaps first nor training jointly beat MOFA+ left on its own](results/evaluation_figures/fig4_pilot_ablation.png)
 
 Neither idea paid off, at least in the one test scenario where both were tried directly. Pre-filling with QRILC or MinProb before handing the data to MOFA+ made the result noticeably worse, not better, on both protein datasets. Training MOFA+ jointly across RNA and protein didn't improve its accuracy on either layer compared to training on each one separately.
 
