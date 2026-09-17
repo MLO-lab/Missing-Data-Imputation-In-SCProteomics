@@ -1,4 +1,4 @@
 Matrix,MOFA+_native mean RMSE,N scenarios (MOFA+_native),Best conventional method (scenario-matched),Best conventional mean RMSE (scenario-matched),N conventional methods fully covering those scenarios,MOFA+ wins (scenario-matched),"Best conventional method (full grid, all masking fractions)","Best conventional mean RMSE (full grid, all masking fractions)","MOFA+ wins (full grid, all masking fractions)"
-dlbcl_rna,1.2611433885295182,25,MsImpute,1.2744494178342574,16,True,MsImpute,1.2744494178342574,True
-dlbcl_protein,0.5632189694110883,25,MsImpute,0.5487857528617432,25,False,MsImpute,0.5487857528617432,False
-crc_protein,1.7063298778507474,25,DAE,1.7273661931613775,23,True,DreamAI,1.6626218471034886,False
+dlbcl_rna,1.182344327780776,25,MsImpute,1.1717401623680868,16,False,MsImpute,1.1717401623680868,False
+dlbcl_protein,0.51653371136706,25,MsImpute,0.4984358969278213,25,False,MsImpute,0.4984358969278213,False
+crc_protein,1.9304826470164074,25,DAE,1.9308687023269073,23,True,DreamAI,1.8034781397321276,False
