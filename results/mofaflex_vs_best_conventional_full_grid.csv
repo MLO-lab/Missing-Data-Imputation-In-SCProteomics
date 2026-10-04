@@ -1,7 +1,4 @@
 Matrix,Factor-model method,Mean RMSE,N scenarios,Best conventional method (scenario-matched),Best conventional mean RMSE (scenario-matched),N conventional methods fully covering those scenarios,Wins (scenario-matched),"Best conventional method (full grid, all masking fractions)","Best conventional mean RMSE (full grid, all masking fractions)","Wins (full grid, all masking fractions)"
-dlbcl_rna,MOFA-Flex,1.2713508796691895,25,MsImpute,1.1717401623680868,16,False,MsImpute,1.1717401623680868,False
-dlbcl_protein,MOFA-Flex,0.5420886349678039,25,MsImpute,0.4984358969278213,25,False,MsImpute,0.4984358969278213,False
-crc_protein,MOFA-Flex,1.978354420239282,25,DAE,1.9308687023269073,23,False,DreamAI,1.8034781397321276,False
-dlbcl_rna,MOFA-Flex-GraphGP,1.2656921291351317,25,MsImpute,1.1717401623680868,16,False,MsImpute,1.1717401623680868,False
-dlbcl_protein,MOFA-Flex-GraphGP,0.5386237359046936,25,MsImpute,0.4984358969278213,25,False,MsImpute,0.4984358969278213,False
-crc_protein,MOFA-Flex-GraphGP,1.9724928657760086,25,DAE,1.9308687023269073,23,False,DreamAI,1.8034781397321276,False
+dlbcl_rna,MOFA-Flex,1.2656921291351317,25,MsImpute,1.1717401623680868,14,False,MsImpute,1.1717401623680868,False
+dlbcl_protein,MOFA-Flex,0.5386237359046936,25,MsImpute,0.4984358969278213,21,False,MsImpute,0.4984358969278213,False
+crc_protein,MOFA-Flex,1.9724928657760086,25,DAE,1.9308687023269073,19,False,DreamAI,1.8034781397321276,False
